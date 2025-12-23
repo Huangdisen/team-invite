@@ -71,8 +71,8 @@ def print_info(text):
         print(f"ℹ {text}")
 
 def validate_email(email):
-    """验证邮箱格式"""
-    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    """验证邮箱格式（更宽松，支持各种域名邮箱）"""
+    pattern = r'^[^\s@]+@[^\s@]+\.[^\s@]+$'
     return re.match(pattern, email) is not None
 
 def format_card_key(card_key):

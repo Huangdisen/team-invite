@@ -868,7 +868,8 @@
     }
 
     function validateEmail(email) {
-      const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      // 更宽松的邮箱验证，支持各种域名邮箱格式
+      const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return pattern.test(email);
     }
 
